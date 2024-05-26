@@ -62,7 +62,7 @@ router.post("/payment", verify, async (req, res) => {
         amount: amount,
         description: `Movie Web Tranfer for the order #${transID}`,
         bank_code: "",
-        callback_url: "https://041b-125-235-232-136.ngrok-free.app/api/bills/callback"
+        callback_url: "https://jsserver-pi25.onrender.com/api/bills/callback"
     };
     const data = config.app_id + "|" + order.app_trans_id + "|" + order.app_user + "|" + order.amount + "|" + order.app_time + "|" + order.embed_data + "|" + order.item;
     order.mac = CryptoJS.HmacSHA256(data, config.key1).toString();
