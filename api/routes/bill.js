@@ -43,7 +43,7 @@ const config = {
 
 router.post("/payment", verify, async (req, res) => {
     const embed_data = {
-        redirecturl: "https://movieclient.netlify.app"
+        redirecturl: "https://movie-app-motphim.com"
     };
     const items = [{
         UserID: req.body.UserID,
